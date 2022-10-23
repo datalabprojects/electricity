@@ -1,0 +1,173 @@
+Disco,Service Areas,Tariff Class,Tariff Type,Tariff Rate 2022,Tariff Rate 2023,Tariff Rate 2024
+Abuja Electricity Distribution Company(AEDC),FCT,R1,Residential customers that use less than 50KW consumption,4.00,4.00,4.00
+Abuja Electricity Distribution Company(AEDC),FCT,R2,Residential customers with more than 50KW consumption,19.51,19.40,19.25
+Abuja Electricity Distribution Company (AEDC),FCT,R3,Residential customers in small estate/government house,37.12,36.91,36.62
+Abuja Electricity Distribution Company (AEDC),Niger,R4,Residental Customers with HV Maximum demand(11/33kv),37.12,36.91,36.62
+Abuja Electricity Distribution Company(AEDC),Niger,C1,Small commercial businesses ,29.43,29.26,29.03
+Abuja Electricity Distribution Company(AEDC),Niger,C2,commercial with LV Maximum demand,37.12,36.91,36.62
+Abuja Electricity Distribution Company(AEDC),Kogi,C3,commercial with HV Maximum demand,37.12,36.91,36.62
+Abuja Electricity Distribution Company(AEDC),Kogi,D1,"Small industries e.g welders, pure water coys",28.38,28.22,28.00
+Abuja Electricity Distribution Company(AEDC),Kogi,D2,Industrial with LV Maximum demand,37.12,36.91,36.62
+Abuja Electricity Distribution Company(AEDC),Kogi,D3,Industrial with HV Maximum demand,37.12,36.91,36.62
+Abuja Electricity Distribution Company(AEDC),Nasarawa,A1,Special e.g Churches and Mosques,28.12,27.96,27.74
+Abuja Electricity Distribution Company(AEDC),Nasarawa,A2,Special with LV Maximum demand,28.12,27.96,27.74
+Abuja Electricity Distribution Company(AEDC),Nasarawa,A3,Special with HV Maximum demand,28.12,27.96,27.74
+Abuja Electricity Distribution Company(AEDC),Nasarawa,S1,Street lights,21.55,21.43,21.26
+Benin Electricity Distribution Company(BEDC),Benin,R1,Residential customers that use less than 50KW consumption,4.00,4.00,4.00
+Benin Electricity Distribution Company(BEDC),Benin,R2S,Residential  Customers with Single/double phase,24.49,24.34,24.14
+Benin Electricity Distribution Company(BEDC),Benin,R2T,Residential Customers with three (3) phase,26.94,26.78,26.56
+Benin Electricity Distribution Company(BEDC),Benin, R3,Residential customers in small estate/government house,31.69,31.50,31.24
+Benin Electricity Distribution Company(BEDC),Edo,R4,Residental Customers with HV Maximum demand(11/33kv),31.69,31.50,31.24
+Benin Electricity Distribution Company(BEDC),Edo,C1S,Commercial with Single/double  phase,27.34,27.17,26.95
+Benin Electricity Distribution Company(BEDC),Edo,C1T,Commercial with three (3) phase,28.41,28.24,28.01
+Benin Electricity Distribution Company(BEDC),Edo,C2,commercial with LV Maximum demand,29.85,29.67,29.43
+Benin Electricity Distribution Company(BEDC),Ekiti,C3,commercial with HV Maximum demand,29.85,29.67,29.43
+Benin Electricity Distribution Company(BEDC),Ekiti,D1S,Industrial with Single/double phase,27.90,27.73,27.50
+Benin Electricity Distribution Company(BEDC),Ekiti,D1T,Industrial with three (3) phase,29.72,29.54,29.30
+Benin Electricity Distribution Company(BEDC),Ekiti,D2,Industrial with LV Maximum demand,30.77,30.59,30.34
+Benin Electricity Distribution Company(BEDC),Ondo,D3,Industrial with HV Maximum demand,30.77,30.59,30.34
+Benin Electricity Distribution Company(BEDC),Ondo,A1S,Special with Single/double phase,25.85,25.69,25.48
+Benin Electricity Distribution Company(BEDC),Ondo,A1T,Special with three phase,26.61,26.45,26.24
+Benin Electricity Distribution Company(BEDC),Delta,A2,Special with LV Maximum demand,27.63,27.46,27.24
+Benin Electricity Distribution Company(BEDC),Delta,A3,Special with HV Maximum demand,27.63,27.46,27.24
+Benin Electricity Distribution Company(BEDC),Delta,S1,Street light ,28.40,28.23,28.00
+Eko Electricity Distribution PLC(EKEDC),Eko,R1,Residential customers that use less than 50KW consumption,4.00,4.00,4.00
+Eko Electricity Distribution PLC(EKEDC),Eko,R2S,Residential  Customers with Single/double phase,19.98,19.90,19.78
+Eko Electricity Distribution PLC(EKEDC),Eko,R2T,Residential Customers with three (3) phase,25.39,25.29,25.13
+Eko Electricity Distribution PLC(EKEDC),Eko,R3,Residential customers in small estate/government house,26.09,25.99,25.83
+Eko Electricity Distribution PLC(EKEDC),Eko,R4,Residental Customers with HV Maximum demand(11/33kv),26.09,25.99,25.83
+Eko Electricity Distribution PLC(EKEDC),Eko,C1S,Commercial with Single/double  phase,20.47,20.39,20.27
+Eko Electricity Distribution PLC(EKEDC),Eko,C1T,Commercial with three (3) phase,25.57,25.47,25.31
+Eko Electricity Distribution PLC(EKEDC),Eko,C2,commercial with LV Maximum demand,29.06,28.94,28.77
+Eko Electricity Distribution PLC(EKEDC),Eko,C3,commercial with HV Maximum demand,29.06,28.94,28.77
+Eko Electricity Distribution PLC(EKEDC),Eko,D1S,Industrial with Single phase,22.07,21.99,21.85
+Eko Electricity Distribution PLC(EKEDC),Eko,D1T,Industrial with three (3) phase,25.07,25.60,25.44
+Eko Electricity Distribution PLC(EKEDC),Eko,D2,Industrial with LV Maximum demand,29.55,29.44,29.26
+Eko Electricity Distribution PLC(EKEDC),Eko,D3,Industrial with HV Maximum demand,29.55,29.44,29.26
+Eko Electricity Distribution PLC(EKEDC),Eko,A1S,Special with Single phase,20.53,20.45,20.32
+Eko Electricity Distribution PLC(EKEDC),Eko,A1T,Special with three phase,20.53,20.45,20.32
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,R1,Residential customers that use less than 50KW consumption,4.00,4.00,4.00
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,R2SP,Residential  Customers with Single/double phase,18.34,18.27,18.15
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,R2T,Residential Customers with three (3) phase,20.47,20.39,20.26
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,R3,Residential customers in small estate/government house,30.61,30.49,30.30
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,R4,Residental Customers with HV Maximum demand(11/33kv),30.98,30.86,30.66
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,C1SP,Commercial with Single/double  phase,21.07,20.99,20.85
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,C1TP,Commercial with three (3) phase,23.67,23.58,23.43
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,C2,commercial with LV Maximum demand,31.43,31.31,31.11
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,C3,commercial with HV Maximum demand,31.77,31.64,31.44
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,D1,Small industries ,23.78,23.69,23.54
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,D2,Industrial with LV Maximum demand,31.96,31.84,31.64
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,D3,Industrial with HV Maximum demand,32.35,32.23,32.02
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,A1,Special e.g Churches and Mosques,22.50,22.41,22.27
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,A2,Special with LV Maximum demand,25.34,25.24,25.08
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,A3,Special with HV Maximum demand,25.47,25.37,25.21
+Ikeja Electricity Distribution Company(IKEDC),Ikeja,S1,Street light ,16.29,16.23,16.13
+Enugu Electricity Distribution Company(EEDC),Abia,R1,Residential customers that use less than 50KW consumption,4.00,4.00,4.00
+Enugu Electricity Distribution Company(EEDC),Abia,R2S,Residential  Customers with Single/double phase,20.76,20.63,20.46
+Enugu Electricity Distribution Company(EEDC),Abia,R2T,Residential Customers with three (3) phase,23.01,22.87,22.68
+Enugu Electricity Distribution Company(EEDC),Abia,R3,Residential customers in small estate/government house,32.30,32.10,31.84
+Enugu Electricity Distribution Company(EEDC),Anambra,R4,Residental Customers with HV Maximum demand(11/33kv),30.93,30.74,30.49
+Enugu Electricity Distribution Company(EEDC),Anambra,C1S,Commercial with Single/double  phase,23.01,22.87,22.68
+Enugu Electricity Distribution Company(EEDC),Anambra,C1T,Commercial with three (3) phase,26.34,26.18,25.97
+Enugu Electricity Distribution Company(EEDC),Anambra,C2,commercial with LV Maximum demand,30.36,30.18,29.94
+Enugu Electricity Distribution Company(EEDC),Anambra,C3,commercial with HV Maximum demand,30.77,30.59,30.34
+Enugu Electricity Distribution Company(EEDC),Anambra,D1S,Industrial with Single/double phase,27.09,26.93,26.71
+Enugu Electricity Distribution Company(EEDC),Ebonyi,D1T,Industrial with three (3) phase,28.57,28.39,28.16
+Enugu Electricity Distribution Company(EEDC),Ebonyi,D2,Industrial with LV Maximum demand,30.65,30.46,30.22
+Enugu Electricity Distribution Company(EEDC),Ebonyi,D3,Industrial with HV Maximum demand,31.43,31.24,30.99
+Enugu Electricity Distribution Company(EEDC),Ebonyi,A1S,Special with Single phase,22.92,22.79,22.60
+Enugu Electricity Distribution Company(EEDC),Enugu,A1T,Special with three phase,26.34,26.18,25.97
+Enugu Electricity Distribution Company(EEDC),Enugu,A2,Special with LV Maximum demand,30.37,30.19,29.95
+Enugu Electricity Distribution Company(EEDC),Imo,A3,Special with HV Maximum demand,30.24,30.06,29.81
+Enugu Electricity Distribution Company(EEDC),Imo,L1,Street light ,22.05,21.92,21.74
+Ibadan Electricity Distribution Company(IBEDC),Oyo,R1,Residential customers that use less than 50KW consumption,4.00,4.00,4.00
+Ibadan Electricity Distribution Company(IBEDC),Oyo,R2,Residential customers with more than 50KW consumption,20.98,20.89,20.76
+Ibadan Electricity Distribution Company(IBEDC),Ogun,R3,Residential customers in small estate/government house,37.53,37.38,37.14
+Ibadan Electricity Distribution Company(IBEDC),Ogun,R4,Residental Customers with HV Maximum demand(11/33kv),37.53,37.38,37.14
+Ibadan Electricity Distribution Company(IBEDC),Ogun,C1,Small commercial businesses ,25.14,25.03,24.87
+Ibadan Electricity Distribution Company(IBEDC),Osun,C2,commercial with LV Maximum demand,35.32,35.17,34.95
+Ibadan Electricity Distribution Company(IBEDC),Osun,C3,commercial with HV Maximum demand,35.32,35.17,34.95
+Ibadan Electricity Distribution Company(IBEDC),Osun,D1,Small industries ,28.32,28.20,28.03
+Ibadan Electricity Distribution Company(IBEDC),Ibadan,D2,Industrial with LV Maximum demand,38.15,37.99,37.75
+Ibadan Electricity Distribution Company(IBEDC),Ibadan,D3,Industrial with HV Maximum demand,38.15,37.99,37.75
+Ibadan Electricity Distribution Company(IBEDC),Ibadan,A1,Special e.g Churches and Mosques,27.11,27.00,26.83
+Ibadan Electricity Distribution Company(IBEDC),Kwara,A2,Special with LV Maximum demand,27.11,27.00,26.83
+Ibadan Electricity Distribution Company(IBEDC),Kwara,A3,Special with HV Maximum demand,27.11,27.00,26.83
+Ibadan Electricity Distribution Company(IBEDC),Kwara,S1,Street light ,20.95,20.86,20.73
+Yola Electricity Distribution Company(YEDC),Yola,R1,Residential customers that use less than 50KW consumption,4.00,4.00,4.00
+Yola Electricity Distribution Company(YEDC),Yola,R2S,Residential  Customers with Single/double phase,22.25,22.13,21.97
+Yola Electricity Distribution Company(YEDC),Yola,R2T,Residential Customers with three (3) phase,24.36,24.24,24.06
+Yola Electricity Distribution Company(YEDC),Yola,R3,Residential customers in small estate/government house,44.50,44.27,43.95
+Yola Electricity Distribution Company(YEDC),Yola,R4,Residental Customers with HV Maximum demand(11/33kv),0.00,0.00,0.00
+Yola Electricity Distribution Company(YEDC),Adamawa,C1S,Commercial with Single/double  phase,35.14,34.96,34.71
+Yola Electricity Distribution Company(YEDC),Adamawa,C1T,Commercial with three (3) phase,40.44,40.23,39.94
+Yola Electricity Distribution Company(YEDC),Adamawa,C2,commercial with LV Maximum demand,43.44,43.22,42.90
+Yola Electricity Distribution Company(YEDC),Adamawa,C3,commercial with HV Maximum demand,51.91,51.65,51.27
+Yola Electricity Distribution Company(YEDC),Borno,D1S,Industrial with Single/double phase,35.14,34.96,34.71
+Yola Electricity Distribution Company(YEDC),Borno,D1T,Industrial with three (3) phase,40.44,40.23,39.94
+Yola Electricity Distribution Company(YEDC),Borno,D2,Industrial with LV Maximum demand,47.68,47.43,47.09
+Yola Electricity Distribution Company(YEDC),Taraba,D3,Industrial with HV Maximum demand,52.97,52.70,52.32
+Yola Electricity Distribution Company(YEDC),Taraba,A1S,Special with Single phase,31.79,31.62,31.39
+Yola Electricity Distribution Company(YEDC),Taraba,A1T,Special with three phase,33.91,33.73,33.49
+Yola Electricity Distribution Company(YEDC),Yobe,A2,Special with LV Maximum demand,37.08,36.89,36.63
+Yola Electricity Distribution Company(YEDC),Yobe,A3,Special with HV Maximum demand,42.38,42.17,41.86
+Yola Electricity Distribution Company(YEDC),Yobe,L1,Street light ,31.78,31.62,31.39
+Port-Harcourt Electricity Distribution Company(PHEDC),Rivers,R1,Residential customers that use less than 50KW consumption,4.00,4.00,4.00
+Port-Harcourt Electricity Distribution Company(PHEDC),Rivers,R2,Residential customers with more than 50KW consumption,26.02,25.86,25.64
+Port-Harcourt Electricity Distribution Company(PHEDC),Rivers,R3,Residential customers in small estate/government house,32.32,32.11,31.84
+Port-Harcourt Electricity Distribution Company(PHEDC),Rivers,R4,Residental Customers with HV Maximum demand(11/33kv),33.69,33.47,33.19
+Port-Harcourt Electricity Distribution Company(PHEDC),Port-Harcourt,C1,Small commercial businesses ,30.13,29.94,29.68
+Port-Harcourt Electricity Distribution Company(PHEDC),Port-Harcourt,C2,commercial with LV Maximum demand,31.50,31.30,31.03
+Port-Harcourt Electricity Distribution Company(PHEDC),Port-Harcourt,C3,commercial with HV Maximum demand,32.87,32.66,32.38
+Port-Harcourt Electricity Distribution Company(PHEDC),Cross River,D1,Small industries ,30.13,29.94,29.68
+Port-Harcourt Electricity Distribution Company(PHEDC),Cross River,D2,Industrial with LV Maximum demand,31.50,31.30,31.03
+Port-Harcourt Electricity Distribution Company(PHEDC),Akwa Ibom,D3,Industrial with HV Maximum demand,32.87,32.66,32.38
+Port-Harcourt Electricity Distribution Company(PHEDC),Akwa Ibom,A1,Special e.g Churches and Mosques,30.13,29.94,29.68
+Port-Harcourt Electricity Distribution Company(PHEDC),Akwa Ibom,A2,Special with LV Maximum demand,31.50,31.30,31.03
+Port-Harcourt Electricity Distribution Company(PHEDC),Bayelsa,A3,Special with HV Maximum demand,32.87,32.66,32.38
+Port-Harcourt Electricity Distribution Company(PHEDC),Bayelsa,S1,Street light ,31.50,31.30,31.03
+Jos Electricity Distribution Company(JEDC),Plateau,R1,Residential customers that use less than 50KW consumption,4.00,4.00,4.00
+Jos Electricity Distribution Company(JEDC),Plateau,R2,Residential customers with more than 50KW consumption,34.76,36.67,29.40
+Jos Electricity Distribution Company(JEDC),Jos,R3,Residential customers in small estate/government house,53.29,56.04,45.55
+Jos Electricity Distribution Company(JEDC),Jos,R4,Residental Customers with HV Maximum demand(11/33kv),53.29,56.04,45.55
+Jos Electricity Distribution Company(JEDC),Jos,C1,Small commercial businesses ,49.52,52.08,42.33
+Jos Electricity Distribution Company(JEDC),Gombe,C2,commercial with LV Maximum demand,52.90,55.63,45.22
+Jos Electricity Distribution Company(JEDC),Gombe,C3,commercial with HV Maximum demand,52.90,55.63,45.22
+Jos Electricity Distribution Company(JEDC),Gombe,D1,Small industries ,49.39,51.93,42.21
+Jos Electricity Distribution Company(JEDC),Bauchi,D2,Industrial with LV Maximum demand,48.38,50.87,41.35
+Jos Electricity Distribution Company(JEDC),Bauchi,D3,Industrial with HV Maximum demand,44.61,45.67,41.35
+Jos Electricity Distribution Company(JEDC),Bauchi,A1,Special e.g Churches and Mosques,51.71,54.38,44.20
+Jos Electricity Distribution Company(JEDC),Benue,A2,Special with LV Maximum demand,51.71,54.38,44.20
+Jos Electricity Distribution Company(JEDC),Benue,A3,Special with HV Maximum demand,51.71,54.38,44.20
+Jos Electricity Distribution Company(JEDC),Benue,S1,Street light ,52.09,54.78,44.53
+Kano Electricity Distribution Company(KEDC),Kano,R1,Residential customers that use less than 50KW consumption,4.00,4.00,4.00
+Kano Electricity Distribution Company(KEDC),Kano,R2A,Residential  Customers with Single/double phase,18.60,18.49,18.34
+Kano Electricity Distribution Company(KEDC),Kano,R2B,Residential Customers with three (3) phase,24.47,24.33,24.13
+Kano Electricity Distribution Company(KEDC),Kano,R3,Residential customers in small estate/government house,35.24,35.03,34.75
+Kano Electricity Distribution Company(KEDC),Kano,R4,Residental Customers with HV Maximum demand(11/33kv),35.24,35.03,34.75
+Kano Electricity Distribution Company(KEDC),Katsina,C1A,Commercial with Single/double  phase,19.58,19.47,19.31
+Kano Electricity Distribution Company(KEDC),Katsina,C1B,Commercial with three (3) phase,24.48,24.34,24.14
+Kano Electricity Distribution Company(KEDC),Katsina,C2,commercial with LV Maximum demand,33.28,33.09,32.82
+Kano Electricity Distribution Company(KEDC),Katsina,C3,commercial with HV Maximum demand,33.28,33.09,32.82
+Kano Electricity Distribution Company(KEDC),Katsina,D1,Small industries ,26.43,26.27,26.06
+Kano Electricity Distribution Company(KEDC),Jigawa,D2,Industrial with LV Maximum demand,34.26,34.06,33.79
+Kano Electricity Distribution Company(KEDC),Jigawa,D3,Industrial with HV Maximum demand,34.26,34.06,33.79
+Kano Electricity Distribution Company(KEDC),Jigawa,A1,Special e.g Churches and Mosques,26.43,26.27,26.06
+Kano Electricity Distribution Company(KEDC),Jigawa,A2,Special with LV Maximum demand,26.43,26.27,26.06
+Kano Electricity Distribution Company(KEDC),Jigawa,A3,Special with HV Maximum demand,26.43,26.27,26.06
+Kano Electricity Distribution Company(KEDC),Jigawa,S1,Street light ,20.55,20.44,20.27
+Kaduna Electricity Distribution Company(KAEDCO),Kebbi,R1,Residential customers that use less than 50KW consumption,4.00,4.00,4.00
+Kaduna Electricity Distribution Company(KAEDCO),Kebbi,R2-SP,Residential  Customers with Single/double phase,19.50,19.37,19.21
+Kaduna Electricity Distribution Company(KAEDCO),Kebbi,R2-TP,Residential Customers with three (3) phase,23.01,22.86,22.67
+Kaduna Electricity Distribution Company(KAEDCO),Kebbi,R3,Residential customers in small estate/government house,30.42,30.22,29.97
+Kaduna Electricity Distribution Company(KAEDCO),Kebbi,R4,Residental Customers with HV Maximum demand(11/33kv),34.71,34.49,34.20
+Kaduna Electricity Distribution Company(KAEDCO),Sokoto,C1,Small commercial businesses ,22.20,22.06,21.87
+Kaduna Electricity Distribution Company(KAEDCO),Sokoto,C2,commercial with LV Maximum demand,28.27,28.09,27.86
+Kaduna Electricity Distribution Company(KAEDCO),Sokoto,C3,commercial with HV Maximum demand,33.54,33.32,33.04
+Kaduna Electricity Distribution Company(KAEDCO),Sokoto,D1,Small industries ,24.27,24.12,23.92
+Kaduna Electricity Distribution Company(KAEDCO),Sokoto,D2,Industrial with LV Maximum demand,28.66,28.48,28.24
+Kaduna Electricity Distribution Company(KAEDCO),Zamfara,D3,Industrial with HV Maximum demand,33.54,33.32,33.04
+Kaduna Electricity Distribution Company(KAEDCO),Zamfara,A1,Special e.g Churches and Mosques,25.15,24.99,24.78
+Kaduna Electricity Distribution Company(KAEDCO),Kaduna,A2,Special with LV Maximum demand,29.06,29.06,28.82
+Kaduna Electricity Distribution Company(KAEDCO),Kaduna,A3,Special with HV Maximum demand,33.32,33.32,33.04
+Kaduna Electricity Distribution Company(KAEDCO),Kaduna,L1,Street light ,29.25,29.06,28.82
