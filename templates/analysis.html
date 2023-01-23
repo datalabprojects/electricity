@@ -1,0 +1,1265 @@
+{% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Consumption Analysis </title>
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'home'%}">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"-->
+<!--                    aria-expanded="true" aria-controls="collapseTwo">-->
+<!--                    <i class="fas fa-fw fa-cog"></i>-->
+<!--                    <span>Components</span>-->
+<!--                </a>-->
+<!--                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">-->
+<!--                    <div class="bg-white py-2 collapse-inner rounded">-->
+<!--                        <h6 class="collapse-header">Custom Components:</h6>-->
+<!--                        <a class="collapse-item" href="buttons.html">Buttons</a>-->
+<!--                        <a class="collapse-item" href="cards.html">Cards</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </li>-->
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"-->
+<!--                    aria-expanded="true" aria-controls="collapseUtilities">-->
+<!--                    <i class="fas fa-fw fa-wrench"></i>-->
+<!--                    <span>Utilities</span>-->
+<!--                </a>-->
+<!--                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"-->
+<!--                    data-parent="#accordionSidebar">-->
+<!--                    <div class="bg-white py-2 collapse-inner rounded">-->
+<!--                        <h6 class="collapse-header">Custom Utilities:</h6>-->
+<!--                        <a class="collapse-item" href="utilities-color.html">Colors</a>-->
+<!--                        <a class="collapse-item" href="utilities-border.html">Borders</a>-->
+<!--                        <a class="collapse-item" href="utilities-animation.html">Animations</a>-->
+<!--                        <a class="collapse-item" href="utilities-other.html">Other</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </li>-->
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+<!--            <div class="sidebar-heading">-->
+<!--                Addons-->
+<!--            </div>-->
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="{% url 'login' %}">Login</a>
+<!--                        <a class="collapse-item" href="register.html">Register</a>-->
+<!--                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>-->
+<!--                        <div class="collapse-divider"></div>-->
+<!--                        <h6 class="collapse-header">Other Pages:</h6>-->
+<!--                        <a class="collapse-item" href="404.html">404 Page</a>-->
+<!--                        <a class="collapse-item" href="blank.html">Blank Page</a>-->
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'chart' %}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'table' %}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span></a>
+            </li>
+
+                  <!-- Nav Item - FOrm -->
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'unitcal' %}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Unit Calculator</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'analysis' %}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Consumption Analysis</span></a>
+            </li>
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content --><div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <form class="form-inline">
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </form>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                            alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Consumption Analysis</h1>
+                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+                        For more information about DataTables, please visit the <a target="_blank"
+                            href="https://datatables.net">official DataTables documentation</a>.</p>
+
+                    <!-- DataTales Example -->
+                    <form method="POST" novalidate action="{% url 'analyse' %}" >
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+
+                                      {% csrf_token %}   <!--include this if you are sending a post request-->
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Appliances</th>
+                                            <th>Category</th>
+                                            <th>Appliance Name</th>
+                                            <th>Duration of use in Hours (Hrs)</th>
+                                            <th>Number of Appliances</th>
+<!--                                            <th>Start date</th>-->
+<!--                                            <th>Salary</th>-->
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Appliances</th>
+                                            <th>Category</th>
+                                            <th>Appliance name</th>
+                                            <th>Duration of use in Hours (Hrs)</th>
+                                            <th>Number of Appliances</th>
+                                            <th>
+                                                 <button type="submit" class="btn btn-primary" onclick='send_value()'>Analyse</button>
+                                            </th>
+<!--                                            <th>-->
+<!--                                              Age-->
+<!--                                            </th>-->
+<!--                                            <th>Salary</th>-->
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>Appliance 1</td>
+                                            <td>
+<!--                                                <select id="options" name="options" class="form-control" hidden="True">-->
+
+<!--                                                    <option value="">Select</option>-->
+<!--                                                    <option value="Cooling system">Cooling system</option>-->
+<!--                                                    <option value="Entertainment">Entertainment</option>-->
+<!--                                                    <option value="Hair Accessories">Hair Accessories</option>-->
+<!--                                                    <option value="Heating Equipment">Heating Equipment</option>-->
+<!--                                                    <option value="House cleaning equipment">House cleaning equipment</option>-->
+<!--                                                    <option value="Kitchen equipment">Kitchen equipment</option>-->
+<!--                                                    <option value="Laundry equipment">Laundry equipment</option>-->
+<!--                                                    <option value="Lighting equipment">Lighting equipment</option>-->
+<!--                                                    <option value="Machines">Machines</option>-->
+<!--                                                    <option value="Refrigerations">Refrigerations</option>-->
+<!--                                                    <option value="Tools">Tools</option>-->
+<!--                                                    <option value="Office Equipment">Office Equipment</option>-->
+<!--                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>-->
+<!--                                                    <option value="Smart Home Devices">Smart Home Devices</option>-->
+<!--                                                </select>-->
+
+                                                <select id="category1" name="category1">
+                                                    <option selected>{{category1}}</option>
+                                                    <option value="Cooling system">Cooling system</option>
+                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Hair Accessories">Hair Accessories</option>
+                                                    <option value="Heating Equipment">Heating Equipment</option>
+                                                    <option value="House cleaning equipment">House cleaning equipment</option>
+                                                    <option value="Kitchen equipment">Kitchen equipment</option>
+                                                    <option value="Laundry equipment">Laundry equipment</option>
+                                                    <option value="Lighting equipment">Lighting equipment</option>
+                                                    <option value="Machines">Machines</option>
+                                                    <option value="Refrigerations">Refrigerations</option>
+                                                    <option value="Tools">Tools</option>
+                                                    <option value="Office Equipment">Office Equipment</option>
+                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>
+                                                    <option value="Smart Home Devices">Smart Home Devices</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select id="appName1" name="appName1">
+<!--                                                     <option value="" selected="selected">Please select subject first</option>-->
+                                                        <option selected>{{appName1}}</option>
+                                                </select>
+                                            </td>
+
+                                            <td>
+                                                <input type="number" class="form-control" id="app1Hr" name = "app1Hr" value="{{app1Hr}}" placeholder="Duration (in Hrs)" >
+                                            </td>
+
+                                            <td>
+                                                <input type="number" class="form-control" id="appNo1" name = "appNo1" value="{{appNo1}}" placeholder="Number of Appliances" >
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>Appliance 2</td>
+                                            <td>
+                                                <select id="category2" name="category2">
+                                                    <option selected>{{category2}}</option>
+                                                    <option value="Cooling system">Cooling system</option>
+                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Hair Accessories">Hair Accessories</option>
+                                                    <option value="Heating Equipment">Heating Equipment</option>
+                                                    <option value="House cleaning equipment">House cleaning equipment</option>
+                                                    <option value="Kitchen equipment">Kitchen equipment</option>
+                                                    <option value="Laundry equipment">Laundry equipment</option>
+                                                    <option value="Lighting equipment">Lighting equipment</option>
+                                                    <option value="Machines">Machines</option>
+                                                    <option value="Refrigerations">Refrigerations</option>
+                                                    <option value="Tools">Tools</option>
+                                                    <option value="Office Equipment">Office Equipment</option>
+                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>
+                                                    <option value="Smart Home Devices">Smart Home Devices</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                 <select id="appName2" name="appName2">
+                                                    <option selected>{{appName2}}</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="app2Hr" name = "app2Hr" value="{{app2Hr}}" placeholder="Duration (in Hrs)" >
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="appNo2" name = "appNo2" value="{{appNo2}}" placeholder="Number of Appliances" >
+                                            </td>
+<!--                                            <td>66</td>-->
+<!--                                            <td>2009/01/12</td>-->
+<!--                                            <td>$86,000</td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>Appliance 3</td>
+                                            <td>
+                                                <select id="category3" name="category3">
+                                                    <option selected>{{category3}}</option>
+                                                    <option value="Cooling system">Cooling system</option>
+                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Hair Accessories">Hair Accessories</option>
+                                                    <option value="Heating Equipment">Heating Equipment</option>
+                                                    <option value="House cleaning equipment">House cleaning equipment</option>
+                                                    <option value="Kitchen equipment">Kitchen equipment</option>
+                                                    <option value="Laundry equipment">Laundry equipment</option>
+                                                    <option value="Lighting equipment">Lighting equipment</option>
+                                                    <option value="Machines">Machines</option>
+                                                    <option value="Refrigerations">Refrigerations</option>
+                                                    <option value="Tools">Tools</option>
+                                                    <option value="Office Equipment">Office Equipment</option>
+                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>
+                                                    <option value="Smart Home Devices">Smart Home Devices</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                               <select id="appName3" name="appName3">
+                                                   <option selected>{{appName3}}</option>
+                                         </select>
+                                            </td>
+
+                                            <td>
+                                                <input type="number" class="form-control" id="app3Hr" name = "app3Hr" value="{{app3Hr}}" placeholder="Duration (in Hrs)" >
+                                            </td>
+
+                                            <td>
+                                                <input type="number" class="form-control" id="appNo3" name = "appNo3" value="{{appNo3}}" placeholder="Number of Appliances" >
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Appliance 4</td>
+                                            <td>
+                                                <select id="category4" name="category4">
+                                                    <option selected>{{category4}}</option>
+                                                    <option value="Cooling system">Cooling system</option>
+                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Hair Accessories">Hair Accessories</option>
+                                                    <option value="Heating Equipment">Heating Equipment</option>
+                                                    <option value="House cleaning equipment">House cleaning equipment</option>
+                                                    <option value="Kitchen equipment">Kitchen equipment</option>
+                                                    <option value="Laundry equipment">Laundry equipment</option>
+                                                    <option value="Lighting equipment">Lighting equipment</option>
+                                                    <option value="Machines">Machines</option>
+                                                    <option value="Refrigerations">Refrigerations</option>
+                                                    <option value="Tools">Tools</option>
+                                                    <option value="Office Equipment">Office Equipment</option>
+                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>
+                                                    <option value="Smart Home Devices">Smart Home Devices</option>
+                                                </select>
+                                            </td>
+                                             <td>
+                                               <select id="appName4" name="appName4">
+                                                    <option selected>{{appName4}}</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="app4Hr" name = "app4Hr" value="{{app4Hr}}" placeholder="Duration (in Hrs)" >
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="appNo4" name = "appNo4" value="{{appNo4}}" placeholder="Number of Appliances" >
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Appliance 5</td>
+                                            <td>
+                                                <select id="category5" name="category5">
+                                                    <option selected>{{category5}}
+                                                    <option value="Cooling system">Cooling system</option>
+                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Hair Accessories">Hair Accessories</option>
+                                                    <option value="Heating Equipment">Heating Equipment</option>
+                                                    <option value="House cleaning equipment">House cleaning equipment</option>
+                                                    <option value="Kitchen equipment">Kitchen equipment</option>
+                                                    <option value="Laundry equipment">Laundry equipment</option>
+                                                    <option value="Lighting equipment">Lighting equipment</option>
+                                                    <option value="Machines">Machines</option>
+                                                    <option value="Refrigerations">Refrigerations</option>
+                                                    <option value="Tools">Tools</option>
+                                                    <option value="Office Equipment">Office Equipment</option>
+                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>
+                                                    <option value="Smart Home Devices">Smart Home Devices</option>
+
+                                                </select>
+                                            </td>
+                                            <td>
+                                               <select id="appName5" name="appName5">
+                                                    <option selected>{{appName5}}</option>
+<!--                                                    <option selected>{{appName5}}</option>-->
+<!--                                                    <option value="Cooling system">Cooling system</option>-->
+<!--                                                    <option value="Entertainment">Entertainment</option>-->
+<!--                                                    <option value="Hair Accessories">Hair Accessories</option>-->
+<!--                                                    <option value="Heating Equipment">Heating Equipment</option>-->
+<!--                                                    <option value="House cleaning equipment">House cleaning equipment</option>-->
+<!--                                                    <option value="Kitchen equipment">Kitchen equipment</option>-->
+<!--                                                    <option value="Laundry equipment">Laundry equipment</option>-->
+<!--                                                    <option value="Lighting equipment">Lighting equipment</option>-->
+<!--                                                    <option value="Machines">Machines</option>-->
+<!--                                                    <option value="Refrigerations">Refrigerations</option>-->
+<!--                                                    <option value="Tools">Tools</option>-->
+<!--                                                    <option value="Office Equipment">Office Equipment</option>-->
+<!--                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>-->
+<!--                                                    <option value="Smart Home Devices">Smart Home Devices</option>-->
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="app5Hr" name = "Hour" value="{{app5Hr}}" placeholder="Duration (in Hrs)" >
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="appNo5" name = "appNo5" value="{{appNo5}}" placeholder="Number of Appliances" >
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>Appliance 6</td>
+                                            <td>
+                                                <select id="category6" name="category6">
+                                                    <option selected>{{category6}}</option>
+                                                    <option value="Cooling system">Cooling system</option>
+                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Hair Accessories">Hair Accessories</option>
+                                                    <option value="Heating Equipment">Heating Equipment</option>
+                                                    <option value="House cleaning equipment">House cleaning equipment</option>
+                                                    <option value="Kitchen equipment">Kitchen equipment</option>
+                                                    <option value="Laundry equipment">Laundry equipment</option>
+                                                    <option value="Lighting equipment">Lighting equipment</option>
+                                                    <option value="Machines">Machines</option>
+                                                    <option value="Refrigerations">Refrigerations</option>
+                                                    <option value="Tools">Tools</option>
+                                                    <option value="Office Equipment">Office Equipment</option>
+                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>
+                                                    <option value="Smart Home Devices">Smart Home Devices</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                               <select id="appName6" name="appName6">
+                                                     <option selected>{{appName6}}</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="app6Hr" name = "Hour" value="{{app6Hr}}" placeholder="Duration (in Hrs)" >
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="appNo6" name = "appNo6" value="{{appNo6}}" placeholder="Number of Appliances" >
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Appliance 7</td>
+                                            <td>
+                                                <select id="category7" name="category7">
+                                                    <option selected>{{category7}}</option>
+                                                    <option value="Cooling system">Cooling system</option>
+                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Hair Accessories">Hair Accessories</option>
+                                                    <option value="Heating Equipment">Heating Equipment</option>
+                                                    <option value="House cleaning equipment">House cleaning equipment</option>
+                                                    <option value="Kitchen equipment">Kitchen equipment</option>
+                                                    <option value="Laundry equipment">Laundry equipment</option>
+                                                    <option value="Lighting equipment">Lighting equipment</option>
+                                                    <option value="Machines">Machines</option>
+                                                    <option value="Refrigerations">Refrigerations</option>
+                                                    <option value="Tools">Tools</option>
+                                                    <option value="Office Equipment">Office Equipment</option>
+                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>
+                                                    <option value="Smart Home Devices">Smart Home Devices</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                               <select id="appName7" name="appName7">
+                                                     <option selected>{{appName7}}</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="app7Hr" name = "Hour" value="{{app7Hr}}" placeholder="Duration (in Hrs)" >
+                                            </td>
+                                              <td>
+                                                <input type="number" class="form-control" id="appNo7" name = "appNo7" value="{{appNo7}}" placeholder="Number of Appliances" >
+                                            </td>
+
+                                        </tr>
+                                     <tr>
+
+                                        <tr>
+                                            <td>Appliance 8</td>
+                                            <td>
+                                                <select id="category8" name="category8">
+                                                    <option selected>{{category8}}</option>
+                                                    <option value="Cooling system">Cooling system</option>
+                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Hair Accessories">Hair Accessories</option>
+                                                    <option value="Heating Equipment">Heating Equipment</option>
+                                                    <option value="House cleaning equipment">House cleaning equipment</option>
+                                                    <option value="Kitchen equipment">Kitchen equipment</option>
+                                                    <option value="Laundry equipment">Laundry equipment</option>
+                                                    <option value="Lighting equipment">Lighting equipment</option>
+                                                    <option value="Machines">Machines</option>
+                                                    <option value="Refrigerations">Refrigerations</option>
+                                                    <option value="Tools">Tools</option>
+                                                    <option value="Office Equipment">Office Equipment</option>
+                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>
+                                                    <option value="Smart Home Devices">Smart Home Devices</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                               <select id="appName8" name="appName8">
+                                                    <option selected>{{appName8}}</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="app8Hr" name = "app8Hr" value="{{app8Hr}}" placeholder="Duration (in Hrs)" >
+                                            </td>
+                                              <td>
+                                                <input type="number" class="form-control" id="appNo8" name = "appNo8" value="{{appNo8}}" placeholder="Number of Appliances" >
+                                            </td>
+
+                                        </tr>
+
+                                      <tr>
+                                            <td>Appliance 9</td>
+                                            <td>
+                                                <select id="category9" name="category9">
+                                                    <option selected>{{category9}}</option>
+                                                    <option value="Cooling system">Cooling system</option>
+                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Hair Accessories">Hair Accessories</option>
+                                                    <option value="Heating Equipment">Heating Equipment</option>
+                                                    <option value="House cleaning equipment">House cleaning equipment</option>
+                                                    <option value="Kitchen equipment">Kitchen equipment</option>
+                                                    <option value="Laundry equipment">Laundry equipment</option>
+                                                    <option value="Lighting equipment">Lighting equipment</option>
+                                                    <option value="Machines">Machines</option>
+                                                    <option value="Refrigerations">Refrigerations</option>
+                                                    <option value="Tools">Tools</option>
+                                                    <option value="Office Equipment">Office Equipment</option>
+                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>
+                                                    <option value="Smart Home Devices">Smart Home Devices</option>
+
+                                                </select>
+
+                                            </td>
+                                          <td>
+                                               <select id="appName9" name="appName9">
+                                                    <option selected>{{appName9}}</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="app9Hr" name = "app9Hr" value="{{app9Hr}}" placeholder="Duration (in Hrs)" >
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="appNo9" name = "appNo9" value="{{appNo9}}" placeholder="Number of Appliances" >
+                                            </td>
+                                        </tr>
+
+                                      <tr>
+                                            <td>Appliance 10</td>
+                                            <td>
+                                                <select id="category10" name="category10">
+                                                    <option selected>{{category10}}</option>
+                                                    <option value="Cooling system">Cooling system</option>
+                                                    <option value="Entertainment">Entertainment</option>
+                                                    <option value="Hair Accessories">Hair Accessories</option>
+                                                    <option value="Heating Equipment">Heating Equipment</option>
+                                                    <option value="House cleaning equipment">House cleaning equipment</option>
+                                                    <option value="Kitchen equipment">Kitchen equipment</option>
+                                                    <option value="Laundry equipment">Laundry equipment</option>
+                                                    <option value="Lighting equipment">Lighting equipment</option>
+                                                    <option value="Machines">Machines</option>
+                                                    <option value="Refrigerations">Refrigerations</option>
+                                                    <option value="Tools">Tools</option>
+                                                    <option value="Office Equipment">Office Equipment</option>
+                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>
+                                                    <option value="Smart Home Devices">Smart Home Devices</option>
+                                                </select>
+                                            </td>
+                                          <td>
+                                               <select id="appName10" name="appName10">
+                                                    <option selected>{{appName10}}</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="app10Hr" name = "app10Hr" value="{{app10Hr}}" placeholder="Duration (in Hrs)" >
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" id="appNo10" name = "appNo10" value="{{appNo10}}" placeholder="Number of Appliances" >
+                                            </td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                        </form>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
+
+<!---->
+
+<!--<script>-->
+<!--    function myfunction(){-->
+<!--        return document.getElementById("options").innerHTML;-->
+<!--    }-->
+
+<!--    document.getElementById("category1").innerHTML = myfunction();-->
+<!--    document.getElementById("category2").innerHTML = myfunction();-->
+<!--    document.getElementById("category3").innerHTML = myfunction();-->
+<!--    document.getElementById("category4").innerHTML = myfunction();-->
+<!--    document.getElementById("category5").innerHTML = myfunction();-->
+<!--    document.getElementById("category6").innerHTML = myfunction();-->
+<!--    document.getElementById("category7").innerHTML = myfunction();-->
+<!--    document.getElementById("category8").innerHTML = myfunction();-->
+<!--    document.getElementById("category9").innerHTML = myfunction();-->
+<!--    document.getElementById("category10").innerHTML = myfunction();-->
+<!--</script>-->
+
+<script>
+
+     function send_value(){
+
+             $.ajax({
+             url: '/analyse/',
+             method : 'POST',
+             data: {
+                     category1: $('#category1').val(),
+                     app1Hr: $('#app1Hr').val(),
+                     appName1: $('#appName1').val(),
+                     appNo1: $('#appNo1').val(),
+
+                     category2: $('#category2').val(),
+                     app2Hr: $('#app2Hr').val(),
+                     appName2: $('#appName2').val(),
+                     appNo2: $('#appNo2').val(),
+
+                     category3: $('#category3').val(),
+                     app3Hr: $('#app3Hr').val(),
+                     appName3: $('#appName3').val(),
+                     appNo3: $('#appNo3').val(),
+
+                     category4: $('#category4').val(),
+                     app4Hr: $('#app4Hr').val(),
+                     appName4: $('#appName4').val(),
+                     appNo4: $('#appNo4').val(),
+
+                     category5: $('#category5').val(),
+                     app5Hr: $('#app5Hr').val(),
+                     appName5: $('#appName5').val(),
+                     appNo5: $('#appNo5').val(),
+
+                     category6: $('#category6').val(),
+                     app6Hr: $('#app6Hr').val(),
+                     appName6: $('#appName6').val(),
+                     appNo6: $('#appNo6').val(),
+
+                      category7: $('#category7').val(),
+                     app7Hr: $('#app7Hr').val(),
+                     appName7: $('#appName7').val(),
+                     appNo7: $('#appNo7').val()
+                     },
+
+             beforeSend: function() {
+              // things to do before submit
+             },
+             success: function(response) {
+
+              alert(response)
+              }
+              });
+     }
+</script>
+
+<script>
+var category1Object = {
+  "Cooling system": {
+    "Air Cooler": [],
+    "Air Conditioner(4 H.P)": [],
+    "Air Conditioner(2 H.P)": [],
+    "Air Conditioner(1.5 H.P)": [],
+    "Air Conditioner(1 H.P)": [],
+    "Box Fan": [],
+    "Ceiling Fan": [],
+    "Central Air Conditioner(10,000BTU)": [],
+    "Central Air Conditioner(24,000BTU)": [],
+    "Central Air Conditioner(40,000BTU)": [],
+    "Dehumidifier": [],
+    "Evaporative Air-Conditioner": [],
+    "Extractor Fan": [],
+    "Furnace Fan Blower(1/3 HP)": [],
+    "Furnace Fan Blower(1/2 HP)": [],
+    "Inverter Air-Conditioner": [],
+    "Pedestal Fan": [],
+    "Portable Air-Conditioner": [],
+    "Standing or Table Fan": [],
+    "Table Fan": [],
+    "Window / Split Air Conditioner": []
+
+
+
+  },
+  "Entertainment": {
+    "LCD Monitor": [],
+    "Satellite Dish": [],
+    "Cable Box(dstvstartime gotv etc machine)": [],
+    "Standard TV": [],
+    "Plasma TV": [],
+    "LCD TV 22": [],
+    "LCD TV 49": [],
+    "LCD TV 82": [],
+    "Stereo": [],
+    "Transistor Radio": [],
+    "Television": [],
+    "Television CRT": [],
+    "Cell Phone Charger": [],
+    "Play Station 4": [],
+    "Play Station 5": [],
+    "DSTV Satellite recorders and decoders ": [],
+    "DVD Player": [],
+    "Guitar amplifier": [],
+  },
+  "Hair Accessories":{
+    "Heated Hair Roller": [],
+    "Hair Dryer": [],
+    "Hair Curling Iron": [],
+    "Shaver": [],
+    "Hair Straightening Iron": []
+  },
+  "Heating Equipment":{
+    "Space Heater": [],
+    "Water Heater(small)": [],
+    "Water Heater 50L": [],
+    "Water Heater 100L": [],
+    "Towel Heater": [],
+    "Portable Heater (Boiling Ring)": [],
+    "Electric Blanket": []
+  },
+
+   "House cleaning equipment":{
+    "Eco Dish Washer": [],
+    "Vacuum Cleaner": [],
+    "Robot Vacuum Cleaner": []
+  },
+
+  "Kitchen equipment":{
+    "Air Fryer": [],
+    "Blender(Medium)": [],
+    "Coffee Maker": [],
+    "Can Opner": [],
+    "Deep Fryer": [],
+    "Dishwasher(Large)": [],
+    "Dishwasher(Medium)": [],
+    "Electric Cooker (1 Plate)": [],
+    "Electric Cooker (2 Plates)": [],
+    "Electric Cooker(4 Plates)": [],
+    "Electric Cooker / Oven": [],
+    "Electric Cooker(2 Plates + Oven": [],
+    "Electric Kettle(Large)": [],
+    "Electric Kettle(Small)": [],
+    "Electric Mower": [],
+    "Electric Pressure Cooker": [],
+    "Food Processor/Blender": [],
+    "Garbage Disposal": [],
+    "Hot Plate": [],
+    "Microwave": [],
+    "Oven": [],
+    "Percolator": [],
+    "Rice Cooker": [],
+    "Sandwich Maker": [],
+    "Sterilizer": [],
+    "Toaster": [],
+    "Toaster(medium)": [],
+    "Toaster(Large)": []
+  },
+
+   "Laundry equipment":{
+    "Bathroom Towel Heater": [],
+    "Clothes Dryer": [],
+    "Cloth Pressing Iron": [],
+    "Steam Iron": [],
+    "Washing Machine": [],
+    "Washing Machine with Spin": [],
+    "Washing Machine with Spin and dryer": []
+
+  },
+
+    "Lighting equipment":{
+    "CFL Bulb (40-watt equivalent) energy saving": [],
+    "CFL Bulb (75-watt equivalent)": [],
+    "CFL Bulb (100-watt equivalent)": [],
+    "lightning bulb(energy saving)": [],
+    "tungsten fillament": []
+  },
+
+    "Machines":{
+    "Air Purifier": [],
+    "Disk Sander 9inch": [],
+    "Home internet router": [],
+    "Hand wash over sink": [],
+    "Sewing Machine": [],
+    "Sump Pump(1/2HP": [],
+    "Sump Pump(1/3HP": [],
+    "water Pump(1 H.P)": [],
+    "water Pump(1.5 H.P)": [],
+    "Well Pump 0.5 HP": [],
+    "Well Pump 1 HP": []
+    },
+
+    "Office Equipment":{
+    "Desktop Computer (Standard home/business)": [],
+    "DSTV satellite recorders and decoder": [],
+    "Laptop Computer": [],
+    "Large Office Printer": [],
+    "Modem": [],
+    "Monitor": [],
+    "Paper Shreddder": [],
+    "Printer(Inkjet)": [],
+    "Projector": [],
+    "Printer(Laser)": [],
+    "Stewart Filmscreen 16:9 projector screen": [],
+    "Sony VPL-VW320ES 4K projector": [],
+    "Wifi Booster": []
+
+
+  }
+}
+window.onload = function() {
+  var category1Sel = document.getElementById("category1");
+  var appName1Sel = document.getElementById("appName1");
+  var category2Sel = document.getElementById("category2");
+  var appName2Sel = document.getElementById("appName2");
+  var category3Sel = document.getElementById("category3");
+  var appName3Sel = document.getElementById("appName3");
+  var category4Sel = document.getElementById("category4");
+  var appName4Sel = document.getElementById("appName4");
+  var category5Sel = document.getElementById("category5");
+  var appName5Sel = document.getElementById("appName5");
+  var category6Sel = document.getElementById("category6");
+  var appName6Sel = document.getElementById("appName6");
+  var category7Sel = document.getElementById("category7");
+  var appName7Sel = document.getElementById("appName7");
+  var category8Sel = document.getElementById("category8");
+  var appName8Sel = document.getElementById("appName8");
+  var category9Sel = document.getElementById("category9");
+  var appName9Sel = document.getElementById("appName9");
+  var category10Sel = document.getElementById("category10");
+  var appName10Sel = document.getElementById("appName10");
+
+  for (var x in category1Object) {
+    category1Sel.options[category1Sel.options.length] = new Option(x, x);
+  }
+  category1Sel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    appName1Sel.length = 1;
+    //display correct values
+    for (var y in category1Object[this.value]) {
+      appName1Sel.options[appName1Sel.options.length] = new Option(y, y);
+    }
+  }
+
+  //Appliance 2
+  for (var x in category1Object) {
+    category2Sel.options[category2Sel.options.length] = new Option(x, x);
+  }
+  category2Sel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    appName2Sel.length = 1;
+    //display correct values
+    for (var y in category1Object[this.value]) {
+      appName2Sel.options[appName2Sel.options.length] = new Option(y, y);
+    }
+  }
+
+
+  //Appliance 3
+  for (var x in category1Object) {
+    category3Sel.options[category3Sel.options.length] = new Option(x, x);
+  }
+  category3Sel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    appName3Sel.length = 1;
+    //display correct values
+    for (var y in category1Object[this.value]) {
+      appName3Sel.options[appName3Sel.options.length] = new Option(y, y);
+    }
+  }
+
+    //Appliance 4
+  for (var x in category1Object) {
+    category4Sel.options[category4Sel.options.length] = new Option(x, x);
+  }
+  category4Sel.onchange = function() {
+    appName4Sel.length = 1;
+    //display correct values
+    for (var y in category1Object[this.value]) {
+      appName4Sel.options[appName4Sel.options.length] = new Option(y, y);
+    }
+  }
+
+      //Appliance 5
+  for (var x in category1Object) {
+    category5Sel.options[category5Sel.options.length] = new Option(x, x);
+  }
+  category5Sel.onchange = function() {
+    appName5Sel.length = 1;
+    //display correct values
+    for (var y in category1Object[this.value]) {
+      appName5Sel.options[appName5Sel.options.length] = new Option(y, y);
+    }
+  }
+
+        //Appliance 6
+  for (var x in category1Object) {
+    category6Sel.options[category6Sel.options.length] = new Option(x, x);
+  }
+  category6Sel.onchange = function() {
+    appName6Sel.length = 1;
+    //display correct values
+    for (var y in category1Object[this.value]) {
+      appName6Sel.options[appName6Sel.options.length] = new Option(y, y);
+    }
+  }
+
+       //Appliance 7
+  for (var x in category1Object) {
+    category7Sel.options[category7Sel.options.length] = new Option(x, x);
+  }
+  category7Sel.onchange = function() {
+    appName7Sel.length = 1;
+    //display correct values
+    for (var y in category1Object[this.value]) {
+      appName7Sel.options[appName7Sel.options.length] = new Option(y, y);
+    }
+  }
+
+       //Appliance 8
+  for (var x in category1Object) {
+    category8Sel.options[category8Sel.options.length] = new Option(x, x);
+  }
+  category8Sel.onchange = function() {
+    appName8Sel.length = 1;
+    //display correct values
+    for (var y in category1Object[this.value]) {
+      appName8Sel.options[appName8Sel.options.length] = new Option(y, y);
+    }
+  }
+
+       //Appliance 9
+  for (var x in category1Object) {
+    category9Sel.options[category9Sel.options.length] = new Option(x, x);
+  }
+  category9Sel.onchange = function() {
+    appName9Sel.length = 1;
+    //display correct values
+    for (var y in category1Object[this.value]) {
+      appName9Sel.options[appName9Sel.options.length] = new Option(y, y);
+    }
+  }
+
+       //Appliance 10
+  for (var x in category1Object) {
+    category10Sel.options[category10Sel.options.length] = new Option(x, x);
+  }
+  category10Sel.onchange = function() {
+    appName10Sel.length = 1;
+    //display correct values
+    for (var y in category1Object[this.value]) {
+      appName10Sel.options[appName10Sel.options.length] = new Option(y, y);
+    }
+  }
+
+}
+</script>
+
+</body>
+
+</html>

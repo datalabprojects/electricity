@@ -9,4 +9,6 @@ urlpatterns = [
         re_path(r'^chart/$', views.chart, name='chart'),
         re_path(r'^unitcal/$', views.unitcal, name='unitcal'),
         re_path(r'^getunit/$', views.getunit, name='getunit'),
+        re_path(r'^analysis/$', views.analysis, name='analysis'),
+        re_path(r'^analyse/$', views.analyse, name='analyse'),
 ]
