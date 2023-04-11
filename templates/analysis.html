@@ -392,6 +392,8 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
+                                <input type = "hidden" class="input--style-2" type="number" name="unitRate" id="unitRate"  value="{{unitRate}}">
+                                <input type = "hidden" type="number" name="unit" id="unit"  value="{{unit}}">
 
                                       {% csrf_token %}   <!--include this if you are sending a post request-->
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -414,7 +416,13 @@
                                             <th>Duration of use in Hours (Hrs)</th>
                                             <th>Number of Appliances</th>
                                             <th>
-                                                 <button type="submit" class="btn btn-primary" onclick='send_value()'>Analyse</button>
+                                                 <button id="btnanalyse" type="submit" class="btn btn-primary"  onclick='send_value()'>Analyse
+                                                 </button>
+
+<!--                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick='send_value()'>-->
+<!--                                                  Analyse-->
+<!--                                                </button>-->
+
                                             </th>
 <!--                                            <th>-->
 <!--                                              Age-->
@@ -426,24 +434,7 @@
                                         <tr>
                                             <td>Appliance 1</td>
                                             <td>
-<!--                                                <select id="options" name="options" class="form-control" hidden="True">-->
 
-<!--                                                    <option value="">Select</option>-->
-<!--                                                    <option value="Cooling system">Cooling system</option>-->
-<!--                                                    <option value="Entertainment">Entertainment</option>-->
-<!--                                                    <option value="Hair Accessories">Hair Accessories</option>-->
-<!--                                                    <option value="Heating Equipment">Heating Equipment</option>-->
-<!--                                                    <option value="House cleaning equipment">House cleaning equipment</option>-->
-<!--                                                    <option value="Kitchen equipment">Kitchen equipment</option>-->
-<!--                                                    <option value="Laundry equipment">Laundry equipment</option>-->
-<!--                                                    <option value="Lighting equipment">Lighting equipment</option>-->
-<!--                                                    <option value="Machines">Machines</option>-->
-<!--                                                    <option value="Refrigerations">Refrigerations</option>-->
-<!--                                                    <option value="Tools">Tools</option>-->
-<!--                                                    <option value="Office Equipment">Office Equipment</option>-->
-<!--                                                    <option value="Phones $ Accessories">Phones $ Accessories</option>-->
-<!--                                                    <option value="Smart Home Devices">Smart Home Devices</option>-->
-<!--                                                </select>-->
 
                                                 <select id="category1" name="category1">
                                                     <option selected>{{category1}}</option>
@@ -629,7 +620,7 @@
                                                 </select>
                                             </td>
                                             <td>
-                                                <input type="number" class="form-control" id="app5Hr" name = "Hour" value="{{app5Hr}}" placeholder="Duration (in Hrs)" >
+                                                <input type="number" class="form-control" id="app5Hr" name = "app5Hr" value="{{app5Hr}}" placeholder="Duration (in Hrs)" >
                                             </td>
                                             <td>
                                                 <input type="number" class="form-control" id="appNo5" name = "appNo5" value="{{appNo5}}" placeholder="Number of Appliances" >
@@ -816,6 +807,8 @@
                                     </tbody>
                                 </table>
 
+
+
                             </div>
                         </div>
                     </div>
@@ -908,10 +901,14 @@
 
      function send_value(){
 
+             //alert("ok")
              $.ajax({
              url: '/analyse/',
              method : 'POST',
              data: {
+                     unitRate: $('#unitRate').val(),
+                     unit: $('#unit').val(),
+
                      category1: $('#category1').val(),
                      app1Hr: $('#app1Hr').val(),
                      appName1: $('#appName1').val(),
@@ -942,16 +939,33 @@
                      appName6: $('#appName6').val(),
                      appNo6: $('#appNo6').val(),
 
-                      category7: $('#category7').val(),
+                     category7: $('#category7').val(),
                      app7Hr: $('#app7Hr').val(),
                      appName7: $('#appName7').val(),
-                     appNo7: $('#appNo7').val()
+                     appNo7: $('#appNo7').val(),
+
+                     category8: $('#category8').val(),
+                     app8Hr: $('#app8Hr').val(),
+                     appName8: $('#appName8').val(),
+                     appNo8: $('#appNo8').val(),
+
+                     category9: $('#category9').val(),
+                     app9Hr: $('#app9Hr').val(),
+                     appName9: $('#appName9').val(),
+                     appNo9: $('#appNo9').val(),
+
+                     category10: $('#category10').val(),
+                     app10Hr: $('#app10Hr').val(),
+                     appName10: $('#appName10').val(),
+                     appNo10: $('#appNo10').val(),
+
                      },
 
              beforeSend: function() {
               // things to do before submit
              },
              success: function(response) {
+
 
               alert(response)
               }

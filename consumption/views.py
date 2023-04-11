@@ -1,6 +1,20 @@
 from django.shortcuts import render
 from django.template.response import TemplateResponse
 import pandas as pd
+from .analyse import calculatecategory1load
+from .analyse import calculatecategory2load
+from .analyse import calculatecategory3load
+from .analyse import calculatecategory4load
+from .analyse import calculatecategory5load
+from .analyse import calculatecategory6load
+from .analyse import calculatecategory7load
+from .analyse import calculatecategory8load
+from .analyse import calculatecategory9load
+from .analyse import calculatecategory10load
+from .analyse import calculateTotalUnits
+from . analyse import calculateUsage
+
+# from . import analyse
 
 df = pd.read_csv('electricity - Sheet1.csv')
 df2 = pd.read_csv('appliances - Sheet1.csv')
@@ -68,7 +82,7 @@ def getunit(request):
     amt = int(amt)
     mp = int(mp)
 
-    if amt and mp > 0:
+    if amt > 0 and mp > 0:
         metered_amt = (amt - mp) * 0.925
         print("Metered amt ", metered_amt)
 
@@ -77,6 +91,7 @@ def getunit(request):
     unitRate = result[1]
     unit = result[2]
     print("distribution company", result[0])
+    print("unit", result[2])
 
     msg = {
         'amount': amt,
@@ -85,16 +100,19 @@ def getunit(request):
         'propertyClass': propertyClass,
         'distributionCompany': distributionCompany,
         'unitRate': unitRate,
-        'únit': unit
+        'unit': unit
     }
-    return TemplateResponse(request, 'unitcal.html', msg)
+    # return TemplateResponse(request, 'unitcal.html', msg)
+    return TemplateResponse(request, 'analysis.html', msg)
 
 
 def getServiceArea(amt, serviceArea, propertyClass):
+    print("hello property")
     sa = serviceArea
     metered_amt = amt
 
     df1 = df[df['Service Areas'] == sa]
+    print(f'Your Service  Area is  {df1}')
     DISCO = df1['Disco'].reset_index(drop=True)[0]
     print(f'Your Distribution Company is  {DISCO}')
     tar_class = df1['Tariff Type'].reset_index(drop=True).tolist()
@@ -107,11 +125,6 @@ def getServiceArea(amt, serviceArea, propertyClass):
     unit = round(unit, 2)
     print(f'Your purchased unit is {unit}')
     return DISCO, unit_rate, unit
-    # if unit:
-    #  return unit
-    #
-    # if unit_rate:
-    #  return unit_rate
 
 
 def analyse(request):
@@ -152,56 +165,100 @@ def analyse(request):
     appNo5 = request.POST.get('appNo5')
     appNo6 = request.POST.get('appNo6')
     appNo7 = request.POST.get('appNo7')
+    appNo8 = request.POST.get('appNo8')
+    appNo9 = request.POST.get('appNo9')
+    appNo10 = request.POST.get('appNo10')
+    unitRate = request.POST.get('unitRate')
+    unit = request.POST.get('unit')
+
+    print('Unit', unit)
+    unitRate = float(unitRate)
+    unit = float(unit)
 
     print('app1Hr', app1Hr)
     print('category1', cat1)
     print('appName1', appName1)
     print('appNo1', appNo1)
+    print('Unit Rate', unitRate)
 
     if cat1 != "" and appName1 != "" and app1Hr != "" and appNo1 != "":
-        load1 = calculateCategory1Load(cat1, appName1, app1Hr, appNo1)
+        load1 = calculatecategory1load(cat1, appName1, app1Hr, appNo1)
         print("load", load1)
     else:
         load1 = 0
 
     if cat2 != "" and appName2 != "" and app2Hr != "" and appNo2 != "":
-        load2 = calculateCategory2Load(cat2, appName2, app2Hr, appNo2)
+        load2 = calculatecategory2load(cat2, appName2, app2Hr, appNo2)
         print("load", load2)
     else:
         load2 = 0
 
     if cat3 != "" and appName3 != "" and app3Hr != "" and appNo3 != "":
-        load3 = calculateCategory3Load(cat3, appName3, app3Hr, appNo3)
+        load3 = calculatecategory3load(cat3, appName3, app3Hr, appNo3)
         print("load", load3)
     else:
         load3 = 0
 
     if cat4 != "" and appName4 != "" and app4Hr != "" and appNo4 != "":
-        load4 = calculateCategory4Load(cat4, appName4, app4Hr, appNo4)
+        load4 = calculatecategory4load(cat4, appName4, app4Hr, appNo4)
         print("load", load4)
     else:
         load4 = 0
 
     if cat5 != "" and appName5 != "" and app5Hr != "" and appNo5 != "":
-        load5 = calculateCategory5Load(cat5, appName5, app5Hr, appNo5)
+        load5 = calculatecategory5load(cat5, appName5, app5Hr, appNo5)
         print("load", load5)
     else:
         load5 = 0
 
     if cat6 != "" and appName6 != "" and app6Hr != "" and appNo6 != "":
-        load6 = calculateCategory6Load(cat6, appName6, app6Hr, appNo6)
+        load6 = calculatecategory6load(cat6, appName6, app6Hr, appNo6)
         print("load", load6)
     else:
         load6 = 0
 
     if cat7 != "" and appName7 != "" and app7Hr != "" and appNo7 != "":
-        load7 = calculateCategory7Load(cat7, appName7, app7Hr, appNo7)
+        load7 = calculatecategory7load(cat7, appName7, app7Hr, appNo7)
         print("load", load7)
     else:
         load7 = 0
 
-    total_load = load1 + load2 + load3 + load4 + load5 + load6 + load7
+    if cat8 != "" and appName8 != "" and app8Hr != "" and appNo8 != "":
+        load8 = calculatecategory8load(cat8, appName8, app8Hr, appNo8)
+        print("load", load8)
+    else:
+        load8 = 0
+
+    if cat9 != "" and appName9 != "" and app9Hr != "" and appNo9 != "":
+        load9 = calculatecategory9load(cat9, appName9, app9Hr, appNo9)
+        print("load", load9)
+    else:
+        load9 = 0
+
+    if cat10 != "" and appName10 != "" and app10Hr != "" and appNo10 != "":
+        load10 = calculatecategory10load(cat10, appName10, app10Hr, appNo10)
+        print("load", load10)
+    else:
+        load10 = 0
+
+    total_load = round(load1 + load2 + load3 + load4 + load5 + load6 + load7 + load8 + load9 + load10, 2)
     print("total load", total_load)
+
+    if total_load > 0:
+        monthly_estimate = round(total_load * 30, 2)
+        print("total estimate", monthly_estimate)
+        print("total estimate type", type(monthly_estimate))
+        print("unit rate type", type(unitRate))
+
+    if monthly_estimate > 0 and unitRate > 0:
+        totalUnits = calculateTotalUnits(monthly_estimate, unitRate)
+    else:
+        totalUnits = 0
+
+    if total_load > 0 and unit > 0:
+        usage = calculateUsage(unit, total_load)
+    else:
+        usage = 0
 
     msg = {
         'category1': cat1,
@@ -240,69 +297,14 @@ def analyse(request):
         'appNo4': appNo4,
         'appNo5': appNo5,
         'appNo6': appNo6,
-        'appNo7': appNo7
+        'appNo7': appNo7,
+        'appNo8': appNo8,
+        'appNo9': appNo9,
+        'appNo10': appNo10,
+        'total_load': total_load,
+        'monthly_estimate': monthly_estimate,
+        'totalUnits': totalUnits,
+        'usage': usage
     }
-    return TemplateResponse(request, 'analysis.html', msg)
-
-
-def calculateCategory1Load(cat1, appName1, app1Hr, appNo1):
-    df3 = df2[df2['Category'] == cat1]
-
-    Load = df3[df3['Appliance'] == appName1]['Standard Load (Watts)'].reset_index(drop=True)[0]
-    print(Load)
-    load = (int(Load) * int(app1Hr) * int(appNo1)) / 1000
-    return load
-
-
-def calculateCategory2Load(cat2, appName2, app2Hr, appNo2):
-    df3 = df2[df2['Category'] == cat2]
-
-    Load2 = df3[df3['Appliance'] == appName2]['Standard Load (Watts)'].reset_index(drop=True)[0]
-    print(Load2)
-    load2 = (int(Load2) * int(app2Hr) * int(appNo2)) / 1000
-    return load2
-
-
-def calculateCategory3Load(cat3, appName3, app3Hr, appNo3):
-    df3 = df2[df2['Category'] == cat3]
-
-    Load3 = df3[df3['Appliance'] == appName3]['Standard Load (Watts)'].reset_index(drop=True)[0]
-    print(Load3)
-    load3 = (int(Load3) * int(app3Hr) * int(appNo3)) / 1000
-    return load3
-
-
-def calculateCategory4Load(cat4, appName4, app4Hr, appNo4):
-    df3 = df2[df2['Category'] == cat4]
-
-    Load4 = df3[df3['Appliance'] == appName4]['Standard Load (Watts)'].reset_index(drop=True)[0]
-    print(Load4)
-    load4 = (int(Load4) * int(app4Hr) * int(appNo4)) / 1000
-    return load4
-
-
-def calculateCategory5Load(cat5, appName5, app5Hr, appNo5):
-    df3 = df2[df2['Category'] == cat5]
-
-    Load5 = df3[df3['Appliance'] == appName5]['Standard Load (Watts)'].reset_index(drop=True)[0]
-    print(Load5)
-    load5 = (int(Load5) * int(app5Hr) * int(appNo5)) / 1000
-    return load5
-
-
-def calculateCategory6Load(cat6, appName6, app6Hr, appNo6):
-    df3 = df2[df2['Category'] == cat6]
-
-    Load6 = df3[df3['Appliance'] == appName6]['Standard Load (Watts)'].reset_index(drop=True)[0]
-    print(Load6)
-    load6 = (int(Load6) * int(app6Hr) * int(appNo6)) / 1000
-    return load6
-
-
-def calculateCategory7Load(cat7, appName7, app7Hr, appNo7):
-    df3 = df2[df2['Category'] == cat7]
-
-    Load7 = df3[df3['Appliance'] == appName7]['Standard Load (Watts)'].reset_index(drop=True)[0]
-    print(Load7)
-    load7 = (int(Load7) * int(app7Hr) * int(appNo7)) / 1000
-    return load7
+    # return TemplateResponse(request, 'analysis.html', msg)
+    return TemplateResponse(request, 'dashboard.html', msg)
